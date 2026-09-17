@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AniPulse - Portal Berita Anime Terkini</title>
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    
+    <style>
+        :root {
+            --primary-accent: #e65c00; /* Warna orange hangat sesuai gambar referensi */
+            --bg-cream: #fdfbf7;
+            --text-dark: #222222;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--bg-cream);
+            color: var(--text-dark);
+        }
+
+        /* Navbar & Header */
+        .btn-pill-orange {
+            background-color: var(--primary-accent);
+            color: white;
+            border-radius: 50px;
+            padding: 8px 24px;
+            font-weight: 600;
+        }
+        .btn-pill-orange:hover {
+            background-color: #cc5200;
+            color: white;
+        }
+
+        /* Hero Section */
+        .hero-section {
+            background-color: #f7f0e6;
+            padding: 60px 0;
+        }
+        .hero-title {
+            font-family: Georgia, serif;
+            font-size: 3.5rem;
+            font-weight: bold;
+        }
+        .btn-rounded-custom {
+            border-radius: 50px;
+            border: 2px solid #ccc;
+            padding: 10px 25px;
+            background: white;
+            font-weight: 600;
+            display: inline-flex;
+            align-items: center;
+            gap: 15px;
+            text-decoration: none;
+            color: var(--text-dark);
+        }
+        .btn-rounded-custom .icon-arrow {
+            background-color: var(--primary-accent);
+            color: white;
+            border-radius: 50%;
+            width: 32px;
+            height: 32px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        /* Category Card Section */
+        .category-card {
+            background: white;
+            border-right: 1px solid #eee;
+            padding: 40px 20px;
+            text-align: center;
+            transition: all 0.3s;
+        }
+        .category-card:hover {
+            box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+        }
+        .category-icon {
+            font-size: 2.5rem;
+            color: var(--primary-accent);
+            margin-bottom: 15px;
+        }
+
+        /* Form Banner Section */
+        .form-banner {
+            background-color: var(--primary-accent);
+            color: white;
+            border-radius: 0;
+            padding: 50px;
+        }
+        .form-pill-input {
+            border-radius: 50px;
+            padding: 12px 20px;
+            border: none;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- 1. Header Navigation -->
+    <nav class="navbar navbar-expand-lg bg-white py-3 shadow-sm">
+        <div class="container">
+            <a class="navbar-brand fw-bold fs-3 text-dark" href="#">
+                <i class="bi bi-play-circle-fill text-danger"></i> AniPulse
+            </a>
+            <div class="d-flex align-items-center gap-3 ms-auto">
+                <a href="#subscribe" class="btn btn-pill-orange d-none d-sm-inline-block">LANGGANAN NEWSLETTER</a>
+                <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 2. Hero Section (Mirip Gambar 1) -->
+    <section class="hero-section">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6 mb-4 mb-lg-0">
+                    <p class="text-uppercase tracking-wider text-muted fw-semibold">Update Musim Ini</p>
+                    <h1 class="hero-title mb-4">The World of Anime & Manga</h1>
+                    <a href="#article" class="btn-rounded-custom">
+                        BACA ARTIKEL UTAMA
+                        <span class="icon-arrow"><i class="bi bi-chevron-right"></i></span>
+                    </a>
+                </div>
+                <div class="col-lg-6 text-center">
+                    <img src="https://images.unsplash.com/photo-1578632767115-351597cf2477?auto=format&fit=crop&w=800&q=80" alt="Anime Illustration" class="img-fluid rounded-4 shadow">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 3. Category Grid Section (Mirip Gambar 2) -->
+    <section class="border-bottom bg-white">
+        <div class="container-fluid p-0">
+            <div class="row g-0">
+                <div class="col-md-6 col-lg-3">
+                    <div class="category-card">
+                        <div class="category-icon"><i class="bi bi-tv"></i></div>
+                        <h4 class="fw-bold">SERIAL ANIME</h4>
+                        <p class="text-muted">Review dan rilis episode terbaru.</p>
+                        <a href="#" class="text-dark"><i class="bi bi-arrow-right fs-4"></i></a>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="category-card">
+                        <div class="category-icon"><i class="bi bi-book"></i></div>
+                        <h4 class="fw-bold">MANGA & LIGHT NOVEL</h4>
+                        <p class="text-muted">Update chapter dan adaptasi baru.</p>
+                        <a href="#" class="text-dark"><i class="bi bi-arrow-right fs-4"></i></a>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="category-card">
+                        <div class="category-icon"><i class="bi bi-controller"></i></div>
+                        <h4 class="fw-bold">GAME JEJEPANGAN</h4>
+                        <p class="text-muted">Kabar seputar JRPG dan Gacha.</p>
+                        <a href="#" class="text-dark"><i class="bi bi-arrow-right fs-4"></i></a>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="category-card">
+                        <div class="category-icon"><i class="bi bi-music-note-beaming"></i></div>
+                        <h4 class="fw-bold">MUSIC & OST</h4>
+                        <p class="text-muted">Lagu pembuka dan penyanyi anime.</p>
+                        <a href="#" class="text-dark"><i class="bi bi-arrow-right fs-4"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 4. Highlight Section (Mirip Gambar 3) -->
+    <section class="py-5" id="article">
+        <div class="container py-4">
+            <div class="row align-items-center">
+                <div class="col-lg-5 mb-4 mb-lg-0">
+                    <img src="https://images.unsplash.com/photo-1607604276583-eef5d076aa5f?auto=format&fit=crop&w=800&q=80" alt="Featured Article" class="img-fluid rounded-4 shadow">
+                </div>
+                <div class="col-lg-7 ps-lg-5">
+                    <h2 class="display-6 fw-bold mb-3">Portal Berita Anime Terdepan dan Terpercaya.</h2>
+                    <p class="lead text-muted mb-4">Kami menyajikan informasi tercepat seputar pengumuman musim baru, tanggal rilis film anime studio ternama, hingga analisis mendalam tentang industri budaya populer Jepang.</p>
+                    
+                    <div class="row mb-4">
+                        <div class="col-sm-6 d-flex align-items-center mb-2">
+                            <i class="bi bi-check-circle-fill text-danger fs-4 me-2"></i>
+                            <span class="fw-bold">UPDATE BERITA 24/7</span>
+                        </div>
+                        <div class="col-sm-6 d-flex align-items-center mb-2">
+                            <i class="bi bi-check-circle-fill text-danger fs-4 me-2"></i>
+                            <span class="fw-bold">KONTEN RESMI & VALID</span>
+                        </div>
+                    </div>
+
+                    <a href="#" class="btn btn-pill-orange px-4 py-3">BACA SELENGKAPNYA <i class="bi bi-chevron-right ms-2"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 5. Form Newsletter Banner (Mirip Gambar 4) -->
+    <section class="py-5" id="subscribe">
+        <div class="container">
+            <div class="form-banner rounded-4 shadow-lg">
+                <div class="row align-items-center">
+                    <div class="col-lg-5 mb-4 mb-lg-0">
+                        <p class="text-uppercase fw-semibold mb-1">FREE NEWSLETTER</p>
+                        <h2 class="display-6 fw-bold mb-3">Dapatkan Info Anime Terbaru Langsung ke Email!</h2>
+                        <p class="mb-3">Jangan ketinggalan info jadwal rilis anime favoritmu setiap minggunya.</p>
+                        <h3 class="fw-bold">+62 812 3456 7890</h3>
+                    </div>
+                    <div class="col-lg-7">
+                        <form onsubmit="subscribeAlert(event)">
+                            <div class="row g-3">
+                                <div class="col-md-6">
+                                    <input type="text" id="nama" class="form-control form-pill-input" placeholder="Nama Lengkap" required>
+                                </div>
+                                <div class="col-md-6">
+                                    <input type="email" id="email" class="form-control form-pill-input" placeholder="Alamat Email" required>
+                                </div>
+                                <div class="col-md-6">
+                                    <input type="text" id="wa" class="form-control form-pill-input" placeholder="Nomor WhatsApp" required>
+                                </div>
+                                <div class="col-md-6">
+                                    <select id="kategori" class="form-select form-pill-input" required>
+                                        <option value="">Kategori Favorit</option>
+                                        <option value="Action">Anime Action</option>
+                                        <option value="Slice of Life">Slice of Life</option>
+                                        <option value="Isekai">Isekai</option>
+                                    </select>
+                                </div>
+                                <div class="col-12 mt-4 text-end">
+                                    <button type="submit" class="btn btn-light rounded-pill px-5 py-3 fw-bold text-dark">
+                                        KIRIM SEKARANG <i class="bi bi-send ms-2"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white text-center py-4 mt-5">
+        <p class="mb-0">AniPulse © 2026 - Portal Berita Anime & Pop Culture Jepang</p>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        function subscribeAlert(e) {
+            e.preventDefault();
+            const nama = document.getElementById('nama').value;
+            alert(`Berhasil! Terima kasih ${nama}, kamu sudah terdaftar di newsletter AniPulse.`);
+        }
+    </script>
+</body>
+</html>
