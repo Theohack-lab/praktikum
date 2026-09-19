@@ -42,10 +42,6 @@
     text-decoration: none;
 }
 
-logo{
-    text-decoration: none;
-    
-}
 body{
     background-image: url("backgroud.jpg");
     background-size: cover;
@@ -54,4 +50,9 @@ body{
 }
 header{
     background-color: whitesmoke;
+}
+
+.logo{
+    text-decoration: none;
+    text-align: center;
 }
