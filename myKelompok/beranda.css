@@ -1,0 +1,272 @@
+/* Reset dasar */
+/*header*/
+header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  justify-content: center;
+  background-image: url("backgroud.jpg");
+  position: relative;
+  height: 100px;
+  background-color: #5CA9D9;
+}
+
+.nav_link {
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    text-align:center;
+}
+
+.nav{
+    font-size: 20px;
+    font-family: 'Rajdhani', sans-serif;
+    font-weight: 600;
+}
+
+
+/*check box*/
+.nav-toggle-checkbox{
+    display: none;
+}
+
+/*side bar*/
+/* garis tiga sidebar*/
+.side-btn{
+    cursor: pointer;
+    font-size: 24px;
+    padding: 10px;
+    display: inline-block;
+    position: fixed;
+    z-index: 300;
+    right: 15px;
+}
+
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100px;              
+  width: 100vw;                 
+  background-color: #30AFFF;
+  transform: translateX(-100%);
+  transition: transform 0.3s ease;
+  padding: 20px;
+  z-index: 100;               
+}
+
+.overlay{
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0,3);
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+    z-index: 50;
+}
+
+/*chekcbox centang biar side dan overlay muncul*/
+.nav-toggle-checkbox:checked ~ .sidebar{
+    transform: translateX(0);
+    max-height: 300px; 
+    padding: 20px;
+}
+
+.nav-toggle-checkbox:checked ~ .overlay{
+    opacity: 1;
+    pointer-events: auto;
+}
+
+/*header dan sidebar jng sentuh!*/
+
+/* slogan save the world */
+.selogan{
+    color: white;
+    text-decoration: none;
+    text-align: right;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    overflow-x: hidden;
+    
+    /* --- BACKGROUND GAMBAR KARAKTER --- */
+    /* Ganti 'gambar-karakter-anda.jpg' dengan path/nama file gambar Anda */
+    background-image: url('backgroud.png'); 
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+/* Overlay transparan agar teks tetap terbaca */
+.bg-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(214, 217, 224, 0.7);
+    z-index: -1;
+}
+
+/* Kontainer utama */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 20px;
+    width: 100%;
+    flex: 1;
+    position: relative;
+    z-index: 1;
+}
+
+/* Bagian Judul Section */
+.section-title {
+    font-size: 24px;
+    font-weight: 500;
+    margin-bottom: 25px;
+    color: #1a1a1a;
+}
+
+/* --- Bagian Sedang Tren (Grid Rak Buku) --- */
+.trending-section {
+    margin-bottom: 60px;
+}
+
+.book-shelf {
+    display: grid;
+    /* Menyusun otomatis ke bawah, minimal lebar tiap item 160px */
+    grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+    gap: 25px;
+    /* Rata kiri agar rapi seperti rak buku */
+    justify-items: start;
+}
+
+/* Item Buku (Link) */
+.book-item {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+    width: 100%;
+    max-width: 160px;
+    transition: transform 0.3s ease;
+}
+
+.book-item:hover {
+    transform: translateY(-8px);
+}
+
+/* Cover Buku (Gambar) */
+.book-cover {
+    width: 100%;
+    aspect-ratio: 2 / 3; /* Rasio portrait seperti buku */
+    background-color: transparent; /* HAPUS warna gelap */
+    border-radius: 15px; /* Sudut melengkung tetap ada */
+    box-shadow: 0 4px 10px rgba(0,0,0,0.25);
+    overflow: hidden; /* WAJIB: agar gambar ikut melengkung di sudut */
+    padding: 0; /* HAPUS padding */
+    display: block; /* Ubah dari flex ke block agar gambar full */
+}
+
+/* Gambar di dalam cover */
+.book-cover img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Memenuhi kotak tanpa gepeng */
+    object-position: center; /* Fokus di tengah */
+    display: block;
+    border-radius: 15px; /* Jika overflow:hidden tidak bekerja, ini jadi cadangan */
+}
+
+.book-item:hover .book-cover {
+    box-shadow: 0 8px 20px rgba(0,0,0,0.4);
+}
+
+/* --- Bagian Kategori --- */
+.category-section {
+    margin-bottom: 40px;
+}
+
+.category-buttons {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.btn-category {
+    background-color: #6edbd3;
+    border: none;
+    border-radius: 30px;
+    padding: 12px 40px;
+    font-size: 16px;
+    font-weight: 500;
+    color: #fff;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.2s;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    min-width: 120px;
+    text-align: center;
+}
+
+.btn-category:hover {
+    background-color: #4db6ac;
+    transform: scale(1.02);
+}
+
+/* --- Teks Info Selengkapnya --- */
+.info-link {
+    position: fixed;
+    bottom: 120px;
+    right: 40px;
+    color: #4a90e2;
+    text-decoration: underline;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    z-index: 10;
+    text-shadow: 1px 1px 2px rgba(255,255,255,0.8);
+}
+
+/* --- Footer --- */
+footer {
+    background-color: #dcdcdc;
+    padding: 25px 0;
+    text-align: center;
+    font-size: 16px;
+    color: #000;
+    margin-top: auto;
+    z-index: 5;
+    position: relative;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .book-shelf {
+        /* Di HP, tampilkan 2 kolom */
+        grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+        gap: 15px;
+    }
+    .book-item {
+        max-width: 100%;
+    }
+    .btn-category {
+        padding: 10px 20px;
+        font-size: 14px;
+        min-width: 90px;
+    }
+    .info-link {
+        bottom: 100px;
+        right: 20px;
+        font-size: 14px;
+    }
+}
