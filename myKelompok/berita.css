@@ -53,7 +53,7 @@ header {
 .overlay{
     position: fixed;
     inset: 0;
-    background: rgba(0,0,0,0,3);
+    background: rgba(0.0.0.0.s3);
     opacity: 0;
     pointer-events: none;
     transition: opacity 0.3s ease;
@@ -72,32 +72,111 @@ header {
     pointer-events: auto;
 }
 
-/* tablet */
-@media (max-width: 768px) {
+/*Tablet*/
+@media (min-width: 481px) and (max-width: 768px) {
+
+    header {
+        height: 80px;
+        position: relative;
+    }
+
+    /* LOGO */
+    .logo img {
+        height: 60px;
+        width: auto;
+    }
+
+    /* TOMBOL ☰ */
+    .side-btn {
+        font-size: 22px;
+        right: 10px;
+    }
+
+    /* SIDEBAR */
+    .sidebar {
+        position: fixed;
+        top: 80px;
+        left: 0;
+        width: 100%;
+        height: auto;
+
+        transform: translateX(-100%);
+        transition: transform 0.3s ease;
+
+        padding: 15px;
+        box-sizing: border-box;
+
+        background-color: #5BD1E7;
+    }
+
+    /* MENU DIBUKA */
+    .nav-toggle-checkbox:checked ~ .sidebar {
+        transform: translateX(0);
+    }
+
+    /* MENU */
+    .navbar-nav {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 15px;
+        margin-left: 0 !important;
+    }
+
+    .nav_link {
+        font-size: 18px;
+        white-space: nowrap;
+    }
+}
+
+/*ponsel*/
+@media (max-width: 480px) {
+  header {
+    position: relative;
+    height: 60px;
+  }
+
+  .logo img {
+    height: 45px;
+  }
+
+  .side-btn {
+    font-size: 20px;
+    right: 8px;
+  }
+
   .sidebar {
-    top: 80px;              
-    height: auto;            
-    max-height: 0;            
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    height: auto;
+    max-height: 0;
     overflow: hidden;
-    transform: none;          
+    transform: none;
     transition: max-height 0.3s ease;
     padding: 0 15px;
   }
 
   .nav-toggle-checkbox:checked ~ .sidebar {
-    max-height: 300px;        
+    max-height: 300px;
     padding: 15px;
   }
 
   .navbar-nav {
-    flex-direction: column;   
-    align-items: center;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    margin-left: 0 !important;
+    width: 100%;
+    overflow-x: auto;
+    gap: 8px !important;
   }
-}
 
-@media (max-width: 480px) {
-  .sidebar {
-    top: 60px;               
+  .nav_link {
+    font-size: 15px;
+    white-space: nowrap;
   }
 }
 
@@ -117,13 +196,17 @@ body{
     background-attachment:fixed;
 }
 
-.logo{
-    text-decoration: none;
-    text-align: center;
-    z-index: 300; 
-    position: relative;
+.logo {
+    display: block;
+    width: auto;
 }
 
+.logo img {
+    width: auto !important;
+    height: 60px !important;
+    max-width: none !important;
+    object-fit: contain;
+}
 h1{
     font-family: 'Rajdhani', sans-serif;
     font-weight: 700;
