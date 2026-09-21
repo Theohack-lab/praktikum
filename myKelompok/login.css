@@ -109,6 +109,8 @@ button {
 
 button:hover {
     background-color: #5fc2c8;
+    transform: translateY(-5px);
+    box-shadow: 0 6px 14px black;
 }
 
 .signup {
@@ -133,24 +135,7 @@ button:hover {
     text-decoration: underline;
 }
 
-/* KEMBALI */
-
-.kembali {
-    position: absolute;
-    left: 50%;
-    bottom: 74px;
-    transform: translateX(-50%);
-    color: #6ed0df;
-    font-size: 15px;
-    text-decoration: none;
-}
-
-.kembali:hover {
-    text-decoration: underline;
-}
-
 /* COPYRIGHT */
-
 .copyright {
     position: absolute;
     right: 20px;
@@ -160,9 +145,14 @@ button:hover {
     font-size: 15px;
 }
 
+body{
+    background-image: url("backgroud.jpg");
+    background-size: cover;
+    background-position: center;
+    background-attachment:fixed;
+    }
+
 /*buat TABLET */
-
-
 @media (max-width: 768px) {
 
     .halaman {
@@ -182,13 +172,15 @@ button:hover {
         top: 130px;
         padding: 25px 40px;
     }
+    .body{
+        background-image: url("backgroud.jpg");
+        background-size: cover;
+        background-position: center;
+        background-attachment:fixed;
+    }
 }
 
-
-
 /* buat HP */
-
-
 @media (max-width: 480px) {
 
     .halaman {
@@ -239,8 +231,6 @@ button:hover {
         font-size: 11px;
     }
     
-  
-
     .copyright {
         right: 15px;
         bottom: 15px;
@@ -253,3 +243,4 @@ button:hover {
         background-position: center;
         background-attachment:fixed;
     }
+}
