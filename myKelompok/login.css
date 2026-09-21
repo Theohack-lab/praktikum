@@ -1,0 +1,255 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #1d1d1d;
+    color: white;
+}
+
+.halaman {
+    padding: 30px 3%;
+}
+
+.halaman h2 {
+    margin: 0 0 15px 0;
+    font-size: 22px;
+    font-weight: normal;
+    color: #999;
+}
+
+.login-container {
+    position: relative;
+    width: 100%;
+    min-height: 755px;
+    background-image: url("background.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    overflow: hidden;
+}
+
+/* LOGO */
+
+.logo {
+    position: absolute;
+    width: 310px;
+    height: auto;
+    top: 25px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+/* KOTAK LOGIN */
+
+.login-box {
+    position: absolute;
+    width: 395px;
+    min-height: 478px;
+    top: 139px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #292935;
+    border-radius: 18px;
+    padding: 25px 45px;
+}
+
+.login-box h1 {
+    text-align: center;
+    margin: 0 0 60px 0;
+    font-size: 46px;
+    font-weight: normal;
+    color: #6ed0df;
+}
+
+/* INPUT */
+
+.input-group {
+    margin-bottom: 37px;
+}
+
+.input-group label {
+    display: block;
+    margin-bottom: 14px;
+    font-size: 18px;
+    color: #f1f1f1;
+}
+
+.input-group input {
+    width: 100%;
+    border: none;
+    border-bottom: 2px solid #18181e;
+    background: transparent;
+    outline: none;
+    color: white;
+    font-size: 18px;
+    padding: 5px 0;
+}
+
+.input-group input:focus {
+    border-bottom-color: #6ed0df;
+}
+
+/* BUTTON */
+
+button {
+    width: 100%;
+    height: 58px;
+    margin-bottom: 16px;
+    border: none;
+    border-radius: 17px;
+    background-color: #6ed0d5;
+    color: white;
+    font-size: 23px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #5fc2c8;
+}
+
+.signup {
+    margin-bottom: 36px;
+}
+
+/* LINK */
+
+.link-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.link-container a {
+    color: #6ed0df;
+    text-decoration: none;
+    font-size: 13px;
+}
+
+.link-container a:hover {
+    text-decoration: underline;
+}
+
+/* KEMBALI */
+
+.kembali {
+    position: absolute;
+    left: 50%;
+    bottom: 74px;
+    transform: translateX(-50%);
+    color: #6ed0df;
+    font-size: 15px;
+    text-decoration: none;
+}
+
+.kembali:hover {
+    text-decoration: underline;
+}
+
+/* COPYRIGHT */
+
+.copyright {
+    position: absolute;
+    right: 20px;
+    bottom: 17px;
+    margin: 0;
+    color: white;
+    font-size: 15px;
+}
+
+/*buat TABLET */
+
+
+@media (max-width: 768px) {
+
+    .halaman {
+        padding: 20px;
+    }
+
+    .login-container {
+        min-height: 700px;
+    }
+
+    .logo {
+        width: 260px;
+    }
+
+    .login-box {
+        width: 370px;
+        top: 130px;
+        padding: 25px 40px;
+    }
+}
+
+
+
+/* buat HP */
+
+
+@media (max-width: 480px) {
+
+    .halaman {
+        padding: 15px;
+    }
+
+    .halaman h2 {
+        font-size: 19px;
+    }
+
+    .login-container {
+        min-height: 700px;
+        background-position: center;
+    }
+
+    .logo {
+        width: 220px;
+        top: 25px;
+    }
+
+    .login-box {
+        width: calc(100% - 30px);
+        min-height: auto;
+        top: 120px;
+        padding: 25px 28px;
+        border-radius: 15px;
+    }
+
+    .login-box h1 {
+        font-size: 38px;
+        margin-bottom: 45px;
+    }
+
+    .input-group {
+        margin-bottom: 30px;
+    }
+
+    .input-group label {
+        font-size: 16px;
+    }
+
+    button {
+        height: 53px;
+        font-size: 20px;
+    }
+
+    .link-container a {
+        font-size: 11px;
+    }
+    
+  
+
+    .copyright {
+        right: 15px;
+        bottom: 15px;
+        font-size: 12px;
+    }
+  
+    body{
+        background-image: url("backgroud.jpg");
+        background-size: cover;
+        background-position: center;
+        background-attachment:fixed;
+    }
