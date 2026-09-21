@@ -1,0 +1,120 @@
+/*header*/
+header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  justify-content: center;
+  background-image: url("backgroud.jpg");
+  position: relative;
+  height: 100px;
+  background-color: #5CA9D9;
+}
+
+.nav_link {
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    text-align:center;
+}
+
+.nav{
+    font-size: 20px;
+    font-family: 'Rajdhani', sans-serif;
+    font-weight: 600;
+}
+
+
+/*check box*/
+.nav-toggle-checkbox{
+    display: none;
+}
+
+/*side bar*/
+/* garis tiga sidebar*/
+.side-btn{
+    cursor: pointer;
+    font-size: 24px;
+    padding: 10px;
+    display: inline-block;
+    position: fixed;
+    z-index: 300;
+    right: 15px;
+}
+
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100px;              
+  width: 100vw;                 
+  background-color: #30AFFF;
+  transform: translateX(-100%);
+  transition: transform 0.3s ease;
+  padding: 20px;
+  z-index: 100;               
+}
+
+.overlay{
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0,3);
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+    z-index: 50;
+}
+
+/*chekcbox centang biar side dan overlay muncul*/
+.nav-toggle-checkbox:checked ~ .sidebar{
+    transform: translateX(0);
+    max-height: 300px; 
+    padding: 20px;
+}
+
+.nav-toggle-checkbox:checked ~ .overlay{
+    opacity: 1;
+    pointer-events: auto;
+}
+
+/*header dan sidebar jng sentuh!*/
+
+/* slogan save the world */
+.selogan{
+    color: white;
+    text-decoration: none;
+    text-align: right;
+}
+
+body{
+    background-image: url("backgroud\ 1\ \(1\).png");
+    background-size: cover;
+    background-position: center;
+    background-attachment:fixed;
+}
+
+.logo{
+    text-decoration: none;
+    text-align: center;
+    z-index: 300; 
+    position: relative;
+}
+
+h1{
+    font-family: 'Rajdhani', sans-serif;
+    font-weight: 700;
+    text-align: center;
+}
+
+/*gambar
+.card-1{
+    display: flex;
+    padding: 15px;
+}
+
+.card-1 img{
+    border:1px solid #ddd;
+    background-color:white;
+    border-radius: 12px;
+    object-fit: cover;
+    width: 100%;
+    height: 300px;
+}
