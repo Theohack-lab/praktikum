@@ -6,7 +6,7 @@ body {
     margin: 0;
     padding: 0;
     font-family: Arial, sans-serif;
-    background-color: #1d1d1d;
+    background-color: white;
     color: white;
 }
 
@@ -52,7 +52,7 @@ body {
     top: 139px;
     left: 50%;
     transform: translateX(-50%);
-    background-color: #292935;
+    background-color: #5BD1E7;
     border-radius: 18px;
     padding: 25px 45px;
 }
@@ -62,7 +62,7 @@ body {
     margin: 0 0 60px 0;
     font-size: 46px;
     font-weight: normal;
-    color: #6ed0df;
+    color: white;
 }
 
 /* INPUT */
@@ -75,13 +75,13 @@ body {
     display: block;
     margin-bottom: 14px;
     font-size: 18px;
-    color: #f1f1f1;
+    color: white;
 }
 
 .input-group input {
     width: 100%;
     border: none;
-    border-bottom: 2px solid #18181e;
+    border-bottom: 2px solid white;
     background: transparent;
     outline: none;
     color: white;
@@ -101,16 +101,16 @@ button {
     margin-bottom: 16px;
     border: none;
     border-radius: 17px;
-    background-color: #6ed0d5;
+    background-color: #5CA9D9;
     color: white;
     font-size: 23px;
     cursor: pointer;
 }
 
 button:hover {
-    background-color: #5fc2c8;
+    background-color: #6cc1f6;
     transform: translateY(-5px);
-    box-shadow: 0 6px 14px black;
+    box-shadow: 0 6px 14px white;
 }
 
 .signup {
@@ -146,7 +146,7 @@ button:hover {
 }
 
 body{
-    background-image: url("backgroud.jpg");
+    background-image: url("backgroud.png");
     background-size: cover;
     background-position: center;
     background-attachment:fixed;
@@ -173,7 +173,7 @@ body{
         padding: 25px 40px;
     }
     .body{
-        background-image: url("backgroud.jpg");
+        background-image: url("backgroud.png");
         background-size: cover;
         background-position: center;
         background-attachment:fixed;
@@ -238,7 +238,7 @@ body{
     }
   
     body{
-        background-image: url("backgroud.jpg");
+        background-image: url("backgroud.png");
         background-size: cover;
         background-position: center;
         background-attachment:fixed;
