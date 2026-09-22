@@ -260,19 +260,13 @@ body {
     margin-bottom: 60px;
 }
 
-.anime-shelf, .game-shelf, .novel-shelf {
+.book-shelf {
     display: grid;
     /* Menyusun otomatis ke bawah, minimal lebar tiap item 160px */
     grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
     gap: 25px;
     /* Rata kiri agar rapi seperti rak buku */
     justify-items: start;
-    border: 1px solid #ddd;
-    border-radius: 12px;
-    padding: 20px;
-    margin-bottom: 30px;
-    background-color: rgba(255, 255, 255, 0.6);
-    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
 }
 
 /* Item Buku (Link) */
