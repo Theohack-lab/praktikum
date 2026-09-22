@@ -1,5 +1,30 @@
-/* Reset dasar */
+
 /*header*/
+header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  justify-content: center;
+  background-image: url("backgroud.jpg");
+  position: relative;
+  height: 100px;
+  background-color: #5CA9D9;
+}
+
+.nav_link {
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    text-align:center;
+}
+
+.nav{
+    font-size: 20px;
+    font-family: 'Rajdhani', sans-serif;
+    font-weight: 600;
+}
+
+
+/*check box*/
 header {
   display: flex;
   align-items: center;
@@ -13,25 +38,19 @@ header {
 .nav_link {
     color: rgb(0, 0, 0);
     text-decoration: none;
-    text-align: center;
+    text-align:center;
     font-family: 'Rajdhani', sans-serif;
     font-size: 25px;
     font-weight: 700;
-    transition: color 0.2s ease;
-    margin: 0 12px; /* jarak kiri-kanan tiap link */
 }
 
-.nav_link:hover {
-    color: #4a90e2;
-}
-     
+
 
 /*check box*/
 .nav-toggle-checkbox{
     display: none;
 }
 
-/*side bar*/
 /* garis tiga sidebar*/
 .side-btn{
     cursor: pointer;
@@ -59,7 +78,7 @@ header {
 .overlay{
     position: fixed;
     inset: 0;
-    background: rgba(0,0,0,0.s3);
+    background: rgba(0,0,0,0,3);
     opacity: 0;
     pointer-events: none;
     transition: opacity 0.3s ease;
@@ -78,137 +97,6 @@ header {
     pointer-events: auto;
 }
 
-/*Tablet*/
-@media (min-width: 481px) and (max-width: 768px) {
-
-    header {
-        height: 80px;
-        position: relative;
-    }
-
-    /* LOGO */
-    .logo img {
-        height: 60px;
-        width: auto;
-    }
-
-    /* TOMBOL ☰ */
-    .side-btn {
-        font-size: 22px;
-        right: 10px;
-    }
-
-    /* SIDEBAR */
-    .sidebar {
-        position: fixed;
-        top: 80px;
-        left: 0;
-        width: 100%;
-        height: auto;
-
-        transform: translateX(-100%);
-        transition: transform 0.3s ease;
-
-        padding: 15px;
-        box-sizing: border-box;
-
-        background-color: #5BD1E7;
-    }
-
-    /* MENU DIBUKA */
-    .nav-toggle-checkbox:checked ~ .sidebar {
-        transform: translateX(0);
-    }
-
-    /* MENU */
-    .navbar-nav {
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-        flex-wrap: wrap;
-        gap: 15px;
-        margin-left: 0 !important;
-    }
-
-    .nav_link {
-        font-size: 18px;
-        white-space: nowrap;
-    }
-}
-
-/*ponsel*/
-@media (max-width: 480px) {
-  header {
-    position: relative;
-    height: 60px;
-  }
-
-  .logo img {
-    height: 45px;
-  }
-
-  .side-btn {
-    font-size: 20px;
-    right: 8px;
-  }
-
-  .sidebar {
-    position: absolute;
-    top: 100%;
-    left: 0;
-    width: 100%;
-    height: auto;
-    max-height: 0;
-    overflow: hidden;
-    transform: none;
-    transition: max-height 0.3s ease;
-    padding: 0 15px;
-  }
-
-  .nav-toggle-checkbox:checked ~ .sidebar {
-    max-height: 300px;
-    padding: 15px;
-  }
-
-  .navbar-nav {
-    flex-direction: row;
-    flex-wrap: nowrap;
-    justify-content: center;
-    margin-left: 0 !important;
-    width: 100%;
-    overflow-x: auto;
-    gap: 8px !important;
-  }
-
-  .nav_link {
-    font-size: 15px;
-    white-space: nowrap;
-  }
-}
-
-.logo {
-    display: block;
-    width: auto;
-}
-
-.logo img {
-    width: auto !important;
-    height: 60px !important;
-    max-width: none !important;
-    object-fit: contain;
-}
-
-
-
-/*header dan sidebar jng sentuh!*/
-
-/* slogan save the world */
-.selogan{
-    color: white;
-    text-decoration: none;
-    text-align: right;
-}
-
 * {
     margin: 0;
     padding: 0;
@@ -223,8 +111,7 @@ body {
     position: relative;
     overflow-x: hidden;
     
-    /* --- BACKGROUND GAMBAR KARAKTER --- */
-    /* Ganti 'gambar-karakter-anda.jpg' dengan path/nama file gambar Anda */
+    /*latar belakang*/
     background-image: url('backgroud.png'); 
     background-size: cover;
     background-position: center;
@@ -262,24 +149,18 @@ body {
     color: #1a1a1a;
 }
 
-/* --- Bagian Sedang Tren (Grid Rak Buku) --- */
+/*tempat anime*/
 .trending-section {
     margin-bottom: 60px;
 }
 
-.anime-shelf, .game-shelf, .novel-shelf {
+.book-shelf {
     display: grid;
     /* Menyusun otomatis ke bawah, minimal lebar tiap item 160px */
     grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
     gap: 25px;
     /* Rata kiri agar rapi seperti rak buku */
     justify-items: start;
-    border: 1px solid #ddd;
-    border-radius: 12px;
-    padding: 20px;
-    margin-bottom: 30px;
-    background-color: rgba(255, 255, 255, 0.6);
-    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
 }
 
 /* Item Buku (Link) */
@@ -299,30 +180,30 @@ body {
 /* Cover Buku (Gambar) */
 .book-cover {
     width: 100%;
-    aspect-ratio: 2 / 3; /* Rasio portrait seperti buku */
-    background-color: transparent; /* HAPUS warna gelap */
-    border-radius: 15px; /* Sudut melengkung tetap ada */
+    aspect-ratio: 2 / 3;
+    background-color: transparent;
+    border-radius: 15px;
     box-shadow: 0 4px 10px rgba(0,0,0,0.25);
-    overflow: hidden; /* WAJIB: agar gambar ikut melengkung di sudut */
-    padding: 0; /* HAPUS padding */
-    display: block; /* Ubah dari flex ke block agar gambar full */
+    overflow: hidden; 
+    padding: 0; 
+    display: block; 
 }
 
 /* Gambar di dalam cover */
 .book-cover img {
     width: 100%;
     height: 100%;
-    object-fit: cover; /* Memenuhi kotak tanpa gepeng */
-    object-position: center; /* Fokus di tengah */
+    object-fit: cover;
+    object-position: center; 
     display: block;
-    border-radius: 15px; /* Jika overflow:hidden tidak bekerja, ini jadi cadangan */
+    border-radius: 15px; 
 }
 
 .book-item:hover .book-cover {
     box-shadow: 0 8px 20px rgba(0,0,0,0.4);
 }
 
-/* --- Bagian Kategori --- */
+/*rekomendasi*/
 .category-section {
     margin-bottom: 40px;
 }
@@ -334,7 +215,7 @@ body {
 }
 
 .btn-category {
-    background-color: #6edbd3;
+    background-color: #5CA9D9;
     border: none;
     border-radius: 30px;
     padding: 12px 40px;
@@ -349,23 +230,10 @@ body {
 }
 
 .btn-category:hover {
-    background-color: #4db6ac;
+    background-color: #6ec8ff;
     transform: scale(1.02);
 }
 
-/* --- Teks Info Selengkapnya --- */
-.info-link {
-    position: fixed;
-    bottom: 120px;
-    right: 40px;
-    color: #4a90e2;
-    text-decoration: underline;
-    font-size: 16px;
-    font-weight: bold;
-    cursor: pointer;
-    z-index: 10;
-    text-shadow: 1px 1px 2px rgba(255,255,255,0.8);
-}
 
 /* --- Footer --- */
 footer {
