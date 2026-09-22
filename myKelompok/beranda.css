@@ -13,13 +13,18 @@ header {
 .nav_link {
     color: rgb(0, 0, 0);
     text-decoration: none;
-    text-align:center;
+    text-align: center;
     font-family: 'Rajdhani', sans-serif;
     font-size: 25px;
     font-weight: 700;
+    transition: color 0.2s ease;
+    margin: 0 12px; /* jarak kiri-kanan tiap link */
 }
 
-
+.nav_link:hover {
+    color: #4a90e2;
+}
+     
 
 /*check box*/
 .nav-toggle-checkbox{
@@ -54,7 +59,7 @@ header {
 .overlay{
     position: fixed;
     inset: 0;
-    background: rgba(0.0.0.0.s3);
+    background: rgba(0,0,0,0.s3);
     opacity: 0;
     pointer-events: none;
     transition: opacity 0.3s ease;
@@ -192,6 +197,8 @@ header {
     max-width: none !important;
     object-fit: contain;
 }
+
+
 
 /*header dan sidebar jng sentuh!*/
 
