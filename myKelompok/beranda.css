@@ -8,8 +8,8 @@ header {
   background-color: white;
   position: relative;
   height: 100px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
 }
-
 .nav_link {
     color: rgb(0, 0, 0);
     text-decoration: none;
