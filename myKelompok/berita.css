@@ -512,3 +512,242 @@ h1{
     }
 
 }
+
+.novel-page {
+    padding: 25px 5% 60px;
+    background: linear-gradient(180deg, #cfeaf3 0%, #e8f6fb 100%);
+    min-height: calc(100vh - 100px);
+}
+
+/* =========================
+   1. SEDANG TREN (CAROUSEL)
+========================= */
+.trend-section {
+    margin-bottom: 45px;
+}
+
+.trend-title {
+    font-family: 'Rajdhani', sans-serif;
+    font-size: 34px;
+    font-weight: 700;
+    color: #0a4b56;
+    margin-bottom: 18px;
+    padding-left: 8px;
+}
+
+.trend-wrapper {
+    position: relative;
+}
+
+.trend-row {
+    display: flex;
+    gap: 18px;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    padding: 8px 4px 18px;
+
+    scrollbar-width: thin;
+    scrollbar-color: #5BD1E7 transparent;
+}
+
+.trend-row::-webkit-scrollbar        { height: 6px; }
+.trend-row::-webkit-scrollbar-track  { background: rgba(91, 209, 231, 0.15); border-radius: 4px; }
+.trend-row::-webkit-scrollbar-thumb  { background: #5BD1E7; border-radius: 4px; }
+.trend-row::-webkit-scrollbar-thumb:hover { background: #3bb4cf; }
+
+/* Kartu trend — agak besar & potret */
+.trend-card {
+    flex: 0 0 200px;
+    height: 300px;
+    border-radius: 14px;
+    overflow: hidden;
+    position: relative;
+    text-decoration: none;
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.18);
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.trend-card:hover {
+    transform: translateY(-6px) scale(1.03);
+    box-shadow: 0 12px 26px rgba(91, 209, 231, 0.6);
+}
+
+.trend-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.trend-name {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding: 28px 12px 12px;
+    background: linear-gradient(180deg, transparent 0%, rgba(0, 0, 0, 0.88) 100%);
+    color: #fff;
+    font-family: 'Rajdhani', sans-serif;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 1.3;
+    text-align: center;
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+/* Tombol panah ‹ › */
+.arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.95);
+    color: #0a4b56;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 26px;
+    font-weight: 700;
+    line-height: 1;
+    text-decoration: none;
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.2);
+    z-index: 5;
+    transition: 0.2s ease;
+    user-select: none;
+}
+
+.arrow:hover {
+    background: #5BD1E7;
+    color: #fff;
+    transform: translateY(-50%) scale(1.1);
+}
+
+.arrow-left  { left: -10px; }
+.arrow-right { right: -10px; }
+
+
+/* =========================
+   2. GENRE — GRID ala game/event
+========================= */
+.genre-block {
+    margin-bottom: 45px;
+}
+
+.genre-heading {
+    font-family: 'Rajdhani', sans-serif;
+    font-size: 26px;
+    font-weight: 700;
+    color: #0a4b56;
+    margin-bottom: 16px;
+    padding-left: 8px;
+    letter-spacing: 0.4px;
+}
+
+.genre-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Card ala event-card */
+.genre-card {
+    background-color: #ffffff;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.15);
+    transition: 0.3s;
+    text-decoration: none;
+    color: inherit;
+    display: flex;
+    flex-direction: column;
+}
+
+.genre-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.20);
+}
+
+.genre-card > img {
+    width: 100%;
+    height: 210px;
+    object-fit: cover;
+    display: block;
+}
+
+.genre-info {
+    padding: 18px;
+}
+
+.genre-info h3 {
+    font-size: 18px;
+    margin: 0 0 8px;
+    color: #222;
+    line-height: 1.3;
+}
+
+.genre-info p {
+    font-size: 13.5px;
+    color: #666;
+    margin: 0 0 10px;
+    line-height: 1.4;
+}
+
+.genre-info span {
+    color: #00b8f0;
+    font-size: 15px;
+    font-weight: 700;
+}
+
+@media (max-width: 950px) {
+    .genre-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .trend-title  { font-size: 26px; }
+    .genre-heading{ font-size: 22px; }
+
+    .trend-card {
+        flex: 0 0 160px;
+        height: 240px;
+    }
+    .trend-name { font-size: 12.5px; padding: 22px 10px 10px; }
+
+    .arrow {
+        width: 36px;
+        height: 36px;
+        font-size: 22px;
+    }
+}
+
+@media (max-width: 600px) {
+    .novel-page { padding: 20px 16px 50px; }
+
+    .trend-title  { font-size: 22px; }
+    .genre-heading{ font-size: 18px; }
+
+    .trend-card {
+        flex: 0 0 140px;
+        height: 210px;
+    }
+
+    .genre-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .genre-card > img { height: 200px; }
+
+    .arrow {
+        width: 32px;
+        height: 32px;
+        font-size: 20px;
+    }
+    .arrow-left  { left: -4px; }
+    .arrow-right { right: -4px; }
+}
