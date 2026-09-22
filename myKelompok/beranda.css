@@ -30,7 +30,17 @@ header {
 .nav-toggle-checkbox{
     display: none;
 }
+/*chekcbox centang biar side dan overlay muncul*/
+.nav-toggle-checkbox:checked ~ .sidebar{
+    transform: translateX(0);
+    max-height: 300px; 
+    padding: 20px;
+}
 
+.nav-toggle-checkbox:checked ~ .overlay{
+    opacity: 1;
+    pointer-events: auto;
+}
 /*side bar*/
 /* garis tiga sidebar*/
 .side-btn{
@@ -66,17 +76,7 @@ header {
     z-index: 50;
 }
 
-/*chekcbox centang biar side dan overlay muncul*/
-.nav-toggle-checkbox:checked ~ .sidebar{
-    transform: translateX(0);
-    max-height: 300px; 
-    padding: 20px;
-}
 
-.nav-toggle-checkbox:checked ~ .overlay{
-    opacity: 1;
-    pointer-events: auto;
-}
 
 /*Tablet*/
 @media (min-width: 481px) and (max-width: 768px) {
